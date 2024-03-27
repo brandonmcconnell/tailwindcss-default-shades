@@ -3,7 +3,7 @@
 <div align="center">
 
 [![minified size](https://img.shields.io/bundlephobia/min/tailwindcss-default-shades)](https://bundlephobia.com/package/tailwindcss-default-shades)
-[![license](https://img.shields.io/github/license/your-github-username/tailwindcss-default-shades?label=license)](https://github.com/your-github-username/tailwindcss-default-shades/blob/main/LICENSE.txt)
+[![license](https://img.shields.io/github/license/brandonmcconnell/tailwindcss-default-shades?label=license)](https://github.com/brandonmcconnell/tailwindcss-default-shades/blob/main/LICENSE)
 [![version](https://img.shields.io/npm/v/tailwindcss-default-shades)](https://www.npmjs.com/package/tailwindcss-default-shades)
 [![twitter](https://img.shields.io/twitter/follow/your-twitter-handle)](https://twitter.com/your-twitter-handle)
 
