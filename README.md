@@ -86,15 +86,15 @@ module.exports = {
       green: { /* your shades */ },
       blue: { /* your shades */ },
     }, {
+      DEFAULT: 100,
       red: 300,
       green: 400,
-      blue: 500,
     }),
   ]
 };
 ```
 
-In this example, the `bg-red` class will apply the `bg-red-300` shade, the `bg-green` class will apply the `bg-green-400` shade, and the `bg-blue` class will apply the `bg-blue-500` shade.
+In this example, the `bg-red` class will apply the `bg-red-300` shade, the `bg-green` class will apply the `bg-green-400` shade, and the `bg-blue` class will apply the `bg-blue-100` shade because it falls back to the `DEFAULT` shade. Had `DEFAULT` not been specified in this example, the `bg-blue` class would have applied the `bg-blue-500` shade, as `500` is the general default shade.
 
 ## Why Use `tailwindcss-default-shades`
 
