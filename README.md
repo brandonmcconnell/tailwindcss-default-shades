@@ -1,4 +1,3 @@
-```md
 <h1 align="center">TailwindCSS Default Shades</h1>
 
 <div align="center">
@@ -15,7 +14,11 @@
 - [Installation](#installation)
 - [Usage](#usage)
   - [Specifying Default Shades](#specifying-default-shades)
+    - [Example: Single Default Shade](#example-single-default-shade)
+    - [Example: Granular Default Shades](#example-granular-default-shades)
 - [Why Use `tailwindcss-default-shades`](#why-use-tailwindcss-default-shades)
+- [License](#license)
+- [Recommendations](#recommendations)
 
 ## Installation
 
