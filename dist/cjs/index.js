@@ -14,6 +14,9 @@ function defaultShades(colors, defaultShade = defaultDefaultShade) {
         (_a = defaultShade.DEFAULT) !== null && _a !== void 0 ? _a : (defaultShade.DEFAULT = defaultDefaultShade);
     const resultColors = {};
     for (const [name, shades] of Object.entries(colors)) {
+        if (!shades) {
+            throw new Error(`defaultShades: shades for color \`${name}\` was an unexpected value of \`${JSON.stringify(shades)}\`. Expected a string representing a single color value or an object with individual shades for that color, comprised of string or numeric keys and string values for the color of each shade.`);
+        }
         if (typeof shades === 'string') {
             resultColors[name] = shades;
             continue;
