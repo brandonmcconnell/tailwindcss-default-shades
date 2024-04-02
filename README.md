@@ -1,4 +1,4 @@
-<h1 align="center">TailwindCSS Default Shades</h1>
+<h1 align="center">Default Shades for TailwindCSS</h1>
 
 <div align="center">
 
@@ -17,8 +17,6 @@
     - [Example: Single Default Shade](#example-single-default-shade)
     - [Example: Granular Default Shades](#example-granular-default-shades)
 - [Why Use `tailwindcss-default-shades`](#why-use-tailwindcss-default-shades)
-- [License](#license)
-- [Recommendations](#recommendations)
 
 ## Installation
 
@@ -108,12 +106,12 @@ I hope you find `tailwindcss-default-shades` a valuable addition to your Tailwin
 
 Enjoy more simplified styles with `tailwindcss-default-shades`! 🚀
 
-## License
-[MIT](https://github.com/brandonmcconnell/tailwindcss-default-shades/blob/main/LICENSE/)
+---
 
-## Recommendations
+I hope you find `tailwindcss-default-shades` a valuable addition to your projects. If you have any issues or suggestions, don't hesitate to open an issue or pull request.
 
 If you liked this, you might also like my other Tailwind CSS plugins:
+* [tailwindcss-signals](https://github.com/brandonmcconnell/tailwindcss-signals): Declarative API for applying styles based on parent or ancestor state
 * [tailwind-lerp-colors](https://github.com/brandonmcconnell/tailwind-lerp-colors): Expand your color horizons and take the fuss out of genertaing new—or expanding existing—color palettes
 * [tailwindcss-selector-patterns](https://github.com/brandonmcconnell/tailwindcss-selector-patterns): Dynamic CSS selector patterns
 * [tailwindcss-multitool](https://github.com/brandonmcconnell/tailwindcss-multitool): Group utilities together by variant
