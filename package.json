@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-default-shades",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Enable default shades for colors in tailwind for shorthand access `bg-blue` vs. `bg-blue-500`",
   "main": "./dist/cjs/index.js",
   "files": [
