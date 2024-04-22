@@ -2,7 +2,7 @@ type Colors = Record<string, string | Record<string, string>>;
 
 const defaultDefaultShade = 500;
 
-export default function defaultShades(
+module.exports = function defaultShades(
   colors: Colors,
   defaultShade: number | string | Record<string, number | string> = defaultDefaultShade
 ): Colors {

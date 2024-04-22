@@ -1,5 +1,6 @@
+"use strict";
 const defaultDefaultShade = 500;
-export default function defaultShades(colors, defaultShade = defaultDefaultShade) {
+module.exports = function defaultShades(colors, defaultShade = defaultDefaultShade) {
     var _a, _b, _c;
     if (!colors || typeof colors !== 'object') {
         throw new Error(`defaultShades: received unexpected \`colors\` argument value of \`${JSON.stringify(colors)}\`. Expected an object with string keys of the color names in your theme, each with a string key of its associated color value or an object with the shades for that color, comprised of string or numeric keys and string values for the color of each shade.`);
@@ -24,4 +25,4 @@ export default function defaultShades(colors, defaultShade = defaultDefaultShade
         resultColors[name] = newShades;
     }
     return resultColors;
-}
+};
