@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-default-shades",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Enable default shades for colors in tailwind for shorthand access `bg-blue` vs. `bg-blue-500`",
   "type": "module",
   "source": "index.ts",
