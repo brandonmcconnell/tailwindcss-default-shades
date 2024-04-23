@@ -31,7 +31,9 @@ export default function defaultShades(
       continue;
     }
     const newShades = { ...shades };
-    newShades.DEFAULT ??= shades[usingKeyedShades ? defaultShade[name] ?? defaultShade.DEFAULT : defaultShade];
+    const newShadesDefault =
+      shades[usingKeyedShades ? defaultShade[name] ?? (defaultShade.DEFAULT as string) : defaultShade];
+    if (newShadesDefault) newShades.DEFAULT ??= newShadesDefault;
     resultColors[name] = newShades;
   }
   return resultColors;
