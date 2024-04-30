@@ -1,11 +1,14 @@
-type Colors = Record<string, string | Record<string, string>>;
+type IsRecord<T> =
+  T extends Record<string, infer R> ? (R extends string | Record<string, string> ? true : never) : never;
+type Colors<T> = IsRecord<T> extends true ? T : never;
+type IndividualShade<T> = Record<keyof Colors<T>, keyof Colors<T>[keyof Colors<T>]> & { DEFAULT?: number | string };
 
 const defaultDefaultShade = 500;
 
-export default function defaultShades(
-  colors: Colors,
-  defaultShade: number | string | Record<string, number | string> = defaultDefaultShade
-): Colors {
+export default function defaultShades<T>(
+  colors: Colors<T>,
+  defaultShade: number | string | IndividualShade<T> = defaultDefaultShade
+): Colors<T> {
   if (!colors || typeof colors !== 'object') {
     throw new Error(
       `defaultShades: received unexpected \`colors\` argument value of \`${JSON.stringify(colors)}\`. Expected an object with string keys of the color names in your theme, each with a string key of its associated color value or an object with the shades for that color, comprised of string or numeric keys and string values for the color of each shade.`
@@ -32,9 +35,13 @@ export default function defaultShades(
     }
     const newShades = { ...shades };
     const newShadesDefault =
-      shades[usingKeyedShades ? defaultShade[name] ?? (defaultShade.DEFAULT as string) : defaultShade];
+      shades[
+        usingKeyedShades
+          ? defaultShade[name as keyof typeof defaultShade] ?? (defaultShade.DEFAULT as string)
+          : defaultShade
+      ];
     if (newShadesDefault) newShades.DEFAULT ??= newShadesDefault;
     resultColors[name] = newShades;
   }
-  return resultColors;
+  return resultColors as Colors<T>;
 }
